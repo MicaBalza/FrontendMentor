@@ -1,5 +1,4 @@
-/* - Mobile: 375px
-- Desktop: 1440px */
+/* - Desktop: 1440px */
 * {
   padding: 0;
   margin: 0;
@@ -11,9 +10,19 @@ html {
   background-color: #e5eff5;
 }
 
+body {
+  height: 100vh;
+}
+
+@media (max-width: 375px) {
+  body {
+    height: auto;
+  }
+}
+
 main {
   width: 100%;
-  height: 100%;
+  height: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,17 +40,16 @@ main {
 
 h1 {
   color: #2ab2af;
-  line-height: 5rem;
 }
 
 h2 {
   color: #c0df34;
-  line-height: 4rem;
+  line-height: 2.5rem;
 }
 
 h3 {
   font-size: 1.5rem;
-  line-height: 5rem;
+  margin-bottom: 2rem;
   color: white;
 }
 
@@ -59,7 +67,7 @@ button {
 
 .container {
   width: 45%;
-  margin-top: 100px;
+  max-width: 700px;
   border-radius: 5px;
   background-color: white;
   overflow: hidden;
@@ -67,12 +75,36 @@ button {
           box-shadow: 0px 20px 40px -15px #9fb2d1;
 }
 
+@media (max-width: 375px) {
+  .container {
+    width: 85%;
+    margin-top: 20%;
+  }
+}
+
 .header {
   padding: 3.5rem;
 }
 
+.header h1 {
+  margin-bottom: 2.5rem;
+}
+
+.header h2 {
+  margin-bottom: 1.5rem;
+}
+
 .header p {
   color: #98a6bd;
+}
+
+@media (max-width: 375px) {
+  .header {
+    padding: 2.5rem;
+  }
+  .header p {
+    line-height: 2.5rem;
+  }
 }
 
 .content {
@@ -81,6 +113,15 @@ button {
   display: -ms-flexbox;
   display: flex;
   color: white;
+}
+
+@media (max-width: 375px) {
+  .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 #first {
@@ -110,6 +151,8 @@ button {
   font-size: 1.4rem;
   cursor: pointer;
   text-align: center;
+  -webkit-box-shadow: 0px 7px 10px 0px #209795;
+          box-shadow: 0px 7px 10px 0px #209795;
   -webkit-transition: background 250ms ease-in-out, -webkit-transform 150ms ease;
   transition: background 250ms ease-in-out, -webkit-transform 150ms ease;
   transition: background 250ms ease-in-out, transform 150ms ease;
@@ -146,14 +189,30 @@ button {
   padding: 3.5rem;
 }
 
+@media (max-width: 375px) {
+  .half {
+    width: auto;
+    padding: 2.5rem;
+  }
+}
+
 footer {
+  height: 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 375px) {
+  footer {
+    margin-top: 40px;
+  }
 }
 
 .attribution {
@@ -162,6 +221,8 @@ footer {
 }
 
 .attribution a {
-  color: #3e52a3;
+  color: #2ab2af;
 }
+
+/* MEDIA QUERIES */
 /*# sourceMappingURL=index.css.map */

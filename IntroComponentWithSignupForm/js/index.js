@@ -1,3 +1,3 @@
-document.querySelector("input").addEventListener("invalid", function (event) {
-  event.preventDefault();
-});
+document.getElementById("form").onsubmit = function () {
+  alert("Hello! I am an alert box!");
+};
